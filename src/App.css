@@ -1,0 +1,12 @@
+.section_div {
+    background-color: white;
+    height:80vh;
+}
+
+@media screen and (max-width:700px) {
+    .section_div {
+        background-color: rgb(245, 107, 130);
+        height:80vh;
+        
+    }
+}

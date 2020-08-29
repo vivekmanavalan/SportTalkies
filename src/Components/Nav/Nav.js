@@ -3,16 +3,11 @@ import '../CSS/Nav.css';
 import {Link} from 'react-router-dom';
 import ProfilePic from '../Images/Profilepic.png';
 
-
-
-const logoutHandler = () => {
-
-}
 const Nav = (props) => {
     const [toggleLogout,setToggleLogout] = useState(false);
     const showLogout = () => {
        setToggleLogout(!toggleLogout);
-       console.log(toggleLogout); 
+       
     }
         return(
             <nav className="nav_main">

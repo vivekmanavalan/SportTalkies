@@ -1,0 +1,86 @@
+.nav_main {
+    width:100%;
+    margin-top:0px;
+    background-color: rgb(37, 37, 37);
+    color:white;
+    display: flex;
+    height:64px;
+}
+
+.nav_ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width:23vw;
+}
+
+.nav_p {
+    font-size: 30px;
+    font-family: roboto;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 5px;
+    margin: auto;
+    width:40vw;
+    display: flex;
+    justify-content: right;
+    
+    
+}
+
+nav li {
+    list-style: none;
+    padding:5px;
+    font-family: roboto;
+    font-size: 18px;
+    color: rgb(248, 98, 123);
+    margin-right:14px;
+    border: 2px solid rgb(37, 37, 37);
+    padding-right: 10px;
+    
+}
+
+.postSignin_div {
+    display: flex;
+    flex-direction: row;
+}
+
+.image_nav {
+    border-radius:50px;
+    margin-top:-3px;
+    margin-right:15px;
+    cursor: pointer;
+}
+
+nav li:first-of-type {
+    color:whitesmoke;
+}
+nav li:hover {
+    border:2px solid white;
+    background-color: whitesmoke;
+    cursor:pointer;
+}
+nav li:first-of-type:hover {
+    background-color: rgb(248, 98, 123);
+    border:2px solid rgb(248, 98, 123);
+}
+
+.logout {
+    position: absolute;
+    top:7.5%;
+    right:1%;
+    color:white;
+    cursor: pointer;
+    
+}
+
+.logout_p {
+    border:2px solid rgb(37, 37, 37);
+    background-color: rgb(37, 37, 37);
+    padding:5px;
+}
+
+.form_input:focus {
+    outline:none;
+}
+

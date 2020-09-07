@@ -6,7 +6,7 @@ import Footer from './Components/Nav/Footer';
 import SignIn from './Components/SignIn';
 import CreatePost from './Components/Content/CreatePost';
 import Home from './Components/Content/Home';
-
+import Post from './Components/Content/Post';
 class App extends Component {
   constructor(props){
     super(props);
@@ -30,6 +30,7 @@ class App extends Component {
   }
 
   render(){
+
   return (
     <Router>
     <div className="main_app" >
@@ -43,6 +44,7 @@ class App extends Component {
         <SignIn authenticateHandler={this.authenticateHandler}/>
         </Route>
         <Route path="/home" component={Home} />
+        <Route path="/sports/:title" render={(props)=> <Post {...props}/>}></Route>
       </Switch>
       <footer>
         <Footer />

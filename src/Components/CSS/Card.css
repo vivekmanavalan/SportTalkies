@@ -1,0 +1,56 @@
+.container {
+    display:flex;
+    flex-direction:row;
+    background-color: rgb(206, 206, 206);
+    list-style:none;
+    text-decoration: none;
+}
+.grid_parent {
+    width:100% !important;
+    height:100% !important;
+    text-decoration: none;  
+}
+
+.link_post {
+    text-decoration:none;
+    color:black;
+}
+
+.tags {
+    width:100%;
+}
+
+.grid_title {
+    width:100%;
+    
+}
+
+.grid_child {
+    box-sizing: border-box;
+    margin:2% !important;
+    border:2px solid black;
+    border-radius:25px;
+    background-color: white;
+    cursor:pointer;
+
+}
+
+.img_content {
+    border-radius:25px;
+}
+
+
+@media only screen and (max-width:1000px){
+    .container {
+        background-color: white;
+    }
+    .div_image {
+        height: 200% !important;
+    }
+    .grid_child {
+        margin:5% !important;
+    }
+}
+
+
+

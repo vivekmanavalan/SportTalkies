@@ -12,8 +12,8 @@ class Footer extends Component {
                     <p>Connect With Me</p>
                     <ul>
                         <li><img src={Facebook} alt="facebook" /></li>
-                        <li><img src={Twitter} alt="twitter" /></li>
-                        <li><img src={Instagram} alt="instagram" /></li>
+                        <li><a href="https://twitter.com/vivekvivy" target="blank"><img src={Twitter} alt="twitter" /></a></li>
+                        <li><a href="https://www.instagram.com/vivy_baller/" target="blank"><img src={Instagram} alt="instagram" /></a></li>
                         <li><img src={Medium} alt="medium" /></li>
                     </ul>
                 

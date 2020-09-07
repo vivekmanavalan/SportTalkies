@@ -11,7 +11,7 @@ const Nav = (props) => {
     }
         return(
             <nav className="nav_main">
-                <p className="nav_p">Transfer Talkies</p>
+                <p className="nav_p">Sport Talkies</p>
                 <ul className="nav_ul">
                 {props.isAuthenticated ?
                    

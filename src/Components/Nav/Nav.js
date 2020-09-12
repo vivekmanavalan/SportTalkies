@@ -11,7 +11,9 @@ const Nav = (props) => {
     }
         return(
             <nav className="nav_main">
-                <p className="nav_p">Sport Talkies</p>
+                <Link style={{textDecoration:'none'}} to="/">
+                    <p className="nav_p">Sport Talkies</p>
+                </Link>
                 <ul className="nav_ul">
                 {props.isAuthenticated ?
                    

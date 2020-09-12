@@ -1,10 +1,10 @@
-.footer  {
-    position: sticky;
+.footer {
+    display:fixed;
     left:0;
     bottom:0;
+    flex-direction: column;
     width:100%;
     text-align: center;
-    /* background-color:rgb(37, 37, 37) ; */
     background-color: whitesmoke;
     
 }
@@ -32,3 +32,14 @@
     border-radius: 50%;
     border: none;
 }
+
+@media screen and (max-width:700px){
+    .footer {
+        position:fixed;
+        left:0;
+        bottom:0;
+        
+        
+    }
+}
+

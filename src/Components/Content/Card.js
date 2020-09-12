@@ -1,28 +1,19 @@
 import React,{Component} from 'react';
 import { Grid, CardContent, Typography} from '@material-ui/core';
-import { Link } from 'react-router-dom';
 import '../CSS/Card.css';
+import {withRouter} from 'react-router-dom';
 class Card extends Component {
-    
-    state={
-        index:null
-    }
 
      postHandler = (e) => {
-        this.setState({
-            index:e
-        });
-        //let title= this.state.items[e].fields.title;
-        console.log("title",this.props.data[e].fields.title);
+        this.props.history.push(`/sports/${this.props.data[e].fields.title}`);
     }
 
     render(){
         if(this.props.data.length>1){
-            console.log("props",this.props.data);
         return(
          
         <div className="container">  
-        <Link to={`/sports/${this.props.data[3].fields.title}`} className="link_post">
+        
         <Grid container spacing={2} justify="center" className="grid_parent">
         {this.props.data.map((elem,index) =>
          <Grid item xs={12} md={3} className="grid_child" onClick={() => this.postHandler(index)}>
@@ -47,7 +38,6 @@ class Card extends Component {
          </Grid>
         )}
          </Grid>
-         </Link>
          </div>
         );
         }
@@ -58,4 +48,4 @@ class Card extends Component {
         }
     }
 }
-export default Card;
+export default withRouter(Card);

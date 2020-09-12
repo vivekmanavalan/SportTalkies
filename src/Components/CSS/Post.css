@@ -1,0 +1,10 @@
+.main_div {
+    position:sticky;
+    margin-bottom: 20%;
+}
+
+p>img {
+    margin-left:25% !important;
+    width:400px !important;
+    height:400px !important;
+}

@@ -90,9 +90,36 @@ nav li:first-of-type:hover {
     outline:none;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:700px) and (min-width:401px) {
     .nav_p {
         font-size: 24px;
     }
+}
+
+@media screen and (max-width:400px)and (min-width:334px){
+    .nav_p {
+        font-size: 20px;
+    }
+    .create_post {
+        font-size: 12px;       
+    }
+    nav li {
+        font-size: 14px;
+        white-space: nowrap;
+        
+    }
+
+}
+
+@media screen and (max-width:333px){
+    .nav_p {
+        font-size: 18px;
+    }
+    
+    nav li {
+        font-size: 12px;
+        white-space: nowrap;
+    }        
+    
 }
 

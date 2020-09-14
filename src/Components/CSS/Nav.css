@@ -1,13 +1,21 @@
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
 .nav_main {
     width:100%;
     margin-top:0px;
     background-color: rgb(37, 37, 37);
     color:white;
     display: flex;
+    flex-direction:row;
+    justify-content: space-between;
     height:64px;
+    align-items: center;
 }
 
 .nav_ul {
+    
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -20,10 +28,11 @@
     font-weight: 700;
     text-transform: uppercase;
     padding: 5px;
-    margin: auto;
+    margin-left: 10px;
     width:40vw;
-    display: flex;
-    justify-content: right;
+    color:white;
+    cursor: pointer;
+    
     
     
 }
@@ -38,11 +47,13 @@ nav li {
     border: 2px solid rgb(37, 37, 37);
     padding-right: 10px;
     
+    
 }
 
 .postSignin_div {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .image_nav {
@@ -82,5 +93,51 @@ nav li:first-of-type:hover {
 
 .form_input:focus {
     outline:none;
+}
+
+@media screen and (max-width:700px) and (min-width:401px) {
+    .nav_p {
+        font-size: 23px;
+        
+        -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    }
+    
+    nav li {
+        font-size: 18px;
+        white-space: nowrap;
+        
+    }
+}
+
+@media screen and (max-width:400px)and (min-width:334px){
+    .nav_p {
+        font-size: 20px;
+    }
+    .create_post {
+        font-size: 12px;       
+    }
+    nav li {
+        font-size: 14px;
+        white-space: nowrap;
+        
+    }
+
+}
+
+@media screen and (max-width:333px){
+    .nav_p {
+        font-size: 18px;
+    }
+    
+    nav li {
+        font-size: 12px;
+        white-space: nowrap;
+    }        
+    
 }
 

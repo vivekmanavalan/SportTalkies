@@ -3,6 +3,7 @@
     flex-direction:row;
     justify-content: space-around;
     margin-top:60px;
+    padding-bottom:50px;
 }
 
 .signIn_main {
@@ -64,6 +65,7 @@
 
     .parent_div {
         margin-top:0px;
+        padding-bottom:0px;
     }
     .signIn_main {
         width:80%;

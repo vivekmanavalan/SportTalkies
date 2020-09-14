@@ -16,10 +16,10 @@ class SignIn extends Component {
             [name]:value,
         });
     } 
-
+    //The below method is added to validate username and password
     validateHandler = (e) => {
         if(this.state.username==="admin" && this.state.password==="qwe") {
-        this.props.history.push('/home');
+        this.props.history.push('/');
         this.props.authenticateHandler();
         }
         else{

@@ -1,0 +1,18 @@
+.main_div {
+    position:sticky;
+    margin-bottom: 20%;
+}
+
+p>img {
+    margin-left:25% !important;
+    width:400px !important;
+    height:400px !important;
+}
+
+@media screen and (max-width:700px) {
+    p>img {
+        margin-left:0%  !important;
+        width:400px !important;
+        height:300px !important;
+    }
+}

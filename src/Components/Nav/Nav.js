@@ -11,13 +11,15 @@ const Nav = (props) => {
     }
         return(
             <nav className="nav_main">
-                <p className="nav_p">Transfer Talkies</p>
+                <Link style={{textDecoration:'none'}} to="/">
+                    <p className="nav_p">Sport Talkies</p>
+                </Link>
                 <ul className="nav_ul">
                 {props.isAuthenticated ?
                    
                    <div className="postSignin_div">
                    <Link style={{ textDecoration: 'none' }} to="/create"> 
-                   <li>CREATE POST</li> 
+                   <li className="create_post">CREATE POST</li> 
                    </Link>
                    <img src={ProfilePic} className="image_nav" width="45px" height="45px" alt="user" onClick={showLogout}/>
                    {toggleLogout ?

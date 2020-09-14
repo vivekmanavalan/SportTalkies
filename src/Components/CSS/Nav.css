@@ -1,3 +1,7 @@
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
 .nav_main {
     width:100%;
     margin-top:0px;
@@ -27,6 +31,7 @@
     margin-left: 10px;
     width:40vw;
     color:white;
+    cursor: pointer;
     
     
     
@@ -93,7 +98,15 @@ nav li:first-of-type:hover {
 @media screen and (max-width:700px) and (min-width:401px) {
     .nav_p {
         font-size: 23px;
+        
+        -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     }
+    
     nav li {
         font-size: 18px;
         white-space: nowrap;

@@ -21,18 +21,19 @@ class App extends Component {
 
 async componentDidMount (){
   const data= await client.getEntries();
-  console.log("data", data.items);
   this.setState({
       items:data.items
   });
 }
 
+  //to check if it is signed in
   signInHandler = () => {
       this.setState({
         issignIn:true,
       });
   }
 
+  //Signin function to display create post button
   authenticateHandler = (e) => {
     this.setState({
       isAuthenticated:!this.state.isAuthenticated,

@@ -95,7 +95,7 @@ nav li:first-of-type:hover {
     outline:none;
 }
 
-@media screen and (max-width:700px) and (min-width:401px) {
+@media screen and (max-width:700px) and (min-width:417px) {
     .nav_p {
         font-size: 23px;
         
@@ -114,7 +114,7 @@ nav li:first-of-type:hover {
     }
 }
 
-@media screen and (max-width:400px)and (min-width:334px){
+@media screen and (max-width:416px)and (min-width:366px){
     .nav_p {
         font-size: 20px;
     }
@@ -129,7 +129,7 @@ nav li:first-of-type:hover {
 
 }
 
-@media screen and (max-width:333px){
+@media screen and (max-width:365px) and (min-width:326px){
     .nav_p {
         font-size: 18px;
     }
@@ -140,4 +140,18 @@ nav li:first-of-type:hover {
     }        
     
 }
+
+@media screen and (max-width:325px) {
+    .nav_p {
+        font-size: 15px;
+    }
+    
+    nav li {
+        font-size: 11px;
+        white-space: nowrap;
+    }        
+    
+}
+
+
 

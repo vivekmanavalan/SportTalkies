@@ -13,9 +13,10 @@ class Post extends Component {
 
     async componentDidMount (){
         const data= await client.getEntries();
-
+        console.log("Post data",data);
         //below line makes sure when link is shared we get the right index using the title from the match.param.title
         let index=data.items.findIndex(obj => obj.fields.title===this.props.match.params.title);
+        console.log("post index", index);
         this.setState({
             data:data.items,
             index,
@@ -23,8 +24,7 @@ class Post extends Component {
       }
 
     render(){
-        if(this.state.data.length>3){
-            console.log("state",this.state.data);
+        if(this.state.data.length>1){
             //below line converts the content into html content.
             let description = marked(this.state.data[this.state.index].fields.body);
         return(

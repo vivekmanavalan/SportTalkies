@@ -21,6 +21,7 @@ class App extends Component {
 
 async componentDidMount (){
   const data= await client.getEntries();
+  console.log("API data", data);
   this.setState({
       items:data.items
   });

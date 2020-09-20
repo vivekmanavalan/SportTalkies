@@ -61,7 +61,7 @@ async componentDidMount (){
         </Route>
         <Route path="/sports/:title" 
           render={(props)=> <Post {...props} data={this.state.items} 
-          index={this.state.items.findIndex(obj => obj.fields.title===props.match.params.title)}/>}>
+          index={this.state.items.findIndex(obj => obj.fields.title===props.match.params.title.split("+").join(" "))}/>}>
 
         </Route>
       </Switch>

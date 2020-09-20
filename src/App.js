@@ -21,18 +21,20 @@ class App extends Component {
 
 async componentDidMount (){
   const data= await client.getEntries();
-  console.log("data", data.items);
+  console.log("API data", data);
   this.setState({
       items:data.items
   });
 }
 
+  //to check if it is signed in
   signInHandler = () => {
       this.setState({
         issignIn:true,
       });
   }
 
+  //Signin function to display create post button
   authenticateHandler = (e) => {
     this.setState({
       isAuthenticated:!this.state.isAuthenticated,
@@ -59,7 +61,7 @@ async componentDidMount (){
         </Route>
         <Route path="/sports/:title" 
           render={(props)=> <Post {...props} data={this.state.items} 
-          index={this.state.items.findIndex(obj => obj.fields.title===props.match.params.title)}/>}>
+          index={this.state.items.findIndex(obj => obj.fields.title===props.match.params.title.split("+").join(" "))}/>}>
 
         </Route>
       </Switch>

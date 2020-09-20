@@ -1,21 +1,39 @@
 import React, {Component} from 'react';
+import { client }  from './client';
 import '../CSS/Post.css';
 import marked from 'marked';
 
 class Post extends Component {
 
+    //Setting data from props
+    state = {
+        data:this.props.data,
+        index: this.props.index,
+    }
+
+    async componentDidMount (){
+        const data= await client.getEntries();
+        //below line makes sure when link is shared we get the right index using the title from the match.param.title
+        // by split and join methods we remove the + symbol to compare the title
+        let index=data.items.findIndex(obj => obj.fields.title===this.props.match.params.title.split("+").join(" "));
+        this.setState({
+            data:data.items,
+            index,
+        });
+      }
+
     render(){
-        console.log("post",this.props);
-        let description = marked(this.props.data[this.props.index].fields.body);
+        if(this.state.data.length>1){
+            //below line converts the content into html content.
+            console.log("props data", this.props);
+            let description = marked(this.state.data[this.state.index].fields.body);
         return(
             <div className="main_div">
-               { this.props.data ? 
+               { this.state.data ? 
                <div> 
-                <header><h1>{this.props.match.params.title}</h1></header>
+                <header><h1>{this.state.data[this.state.index].fields.title}</h1></header>
                 <section>
-                    <article>
-                    {this.props.data[this.props.index].fields.title}
-                    </article>
+                    {/* below line makes sure that the html content is converted into proper paragraph */}
                     <article dangerouslySetInnerHTML={{__html: description}}/>
                 </section>
                 </div>
@@ -24,6 +42,12 @@ class Post extends Component {
                 }
             </div>
         )
+        }
+        else{
+            return(
+                <h2>Loading....</h2>
+            )
+        }
     }
 }
 

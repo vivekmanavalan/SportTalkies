@@ -5,7 +5,13 @@ import {withRouter} from 'react-router-dom';
 class Card extends Component {
 
      postHandler = (e) => {
-        this.props.history.push(`/sports/${this.props.data[e].fields.title}`);
+         let title = this.props.data[e].fields.title;
+         
+         //below line add + symbol in the place of a space so that 20% is not added to the url while sharing
+         title = title.split(" ").join("+");
+         this.props.history.push(`/sports/${title}`);
+
+        //this.props.history.push(`/sports/${this.props.data[e].fields.title}`);
     }
 
     render(){
